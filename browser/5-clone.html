@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="HelloId">Hello!</p>
+
+  <script>
+    const p = document.getElementById('HelloId')
+    const pClone = p.cloneNode(true)  // Παίρνει true ή false. Το true δηλώνει ότι θα αντιγράψει όλη την δομή, όλα τα nested elements / η false μόνο το outer element
+
+    document.body.appendChild(pClone)
+  </script>
+  
+</body>
+</html>
