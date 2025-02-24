@@ -4,7 +4,7 @@ students.forEach(function(val, index, arr) {   // _ σημαίνει να κάν
   console.log(index, val, arr)
 })
 
-let filtered = students.filter(student => student === 'Andreas')  // Για κάφε στοιχείο student μεσα στο students οπου student 'Andreas'
+let filtered = students.filter(student => student === 'Andreas')  // Για κάθε στοιχείο student μεσα στο students οπου student 'Andreas'
 console.log(filtered)
 
 let mapped = students.map(student => "Student: " + student)       // Η map αντιστοιχεί

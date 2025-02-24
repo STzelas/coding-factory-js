@@ -7,6 +7,10 @@ function createMultiplier(multiplier) {
   }
 }
 
+// Ή Arrow function
+const createMultiplier2 = (multiplier) => (num) => num * multiplier
+
+
 const double = createMultiplier(2)  // Το double είναι το inner function απο πάνω
 const triple = createMultiplier(3)  // Το triple είναι το inner function απο πάνω
 console.log(double(5))  // 10

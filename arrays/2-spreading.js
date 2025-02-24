@@ -1,5 +1,5 @@
 const initial = [1, 2, 3]
-const copy = [...initial] // ... spread operator / Δίνει ως output τα στοιχεία του πίνακα / swallow copy
+const copy = [...initial] // ... spread operator / Δίνει ως output τα στοιχεία του initial πίνακα / swallow copy
 
 const extended = [0, ...initial, 4]  // πάλι swallow copy εντός άλλου πίνακα
 const chars = [..."Hello"]
