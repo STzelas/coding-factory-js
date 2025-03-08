@@ -1,5 +1,5 @@
 const DEFAULT = 0
-let counter = DEFAULT
+let counter = DEFAULT   // State - model
 
 window.addEventListener('DOMContentLoaded', function() {
   this.document.querySelector("#btnDecr").addEventListener('click', () => onDecreaseClicked())
@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', function() {
 /**
  * Handlers - Controller
  */
+
 function onDecreaseClicked(data) {
   // validate
   decreaseCounter()
@@ -57,7 +58,7 @@ function styleCounter(counterDOM) {
 }
 
 // function styleCounter(counterDOM) {
-//   if (counter == 0) {
+//   if (counter === 0) {
 //     counterDOM.style.color = 'black'
 //   } else if (counter > 0) {
 //     counterDOM.style.color = 'green'
