@@ -68,10 +68,7 @@ function styleCounter(counterDOM) {
 // }
 
 
-
-
 // let counter = 0;
-
 // const btnDecr = document.getElementById("btnDecr")
 // const btnReset = document.getElementById("btnReset")
 // const btnIncr = document.getElementById("btnIncr")
@@ -86,11 +83,9 @@ function styleCounter(counterDOM) {
 // btnReset.addEventListener('click', function(e) {
 //   counter = 0;
 //   counterDOM.innerHTML = counter
-  
 // })
 
 // btnIncr.addEventListener('click', function(e) {
 //   counter++;
 //   counterDOM.innerHTML = counter
-  
 // })
