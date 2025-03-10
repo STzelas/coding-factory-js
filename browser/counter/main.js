@@ -1,10 +1,16 @@
 const DEFAULT = 0
 let counter = DEFAULT   // State - model
 
-window.addEventListener('DOMContentLoaded', function() {
-  this.document.querySelector("#btnDecr").addEventListener('click', () => onDecreaseClicked())
-  this.document.querySelector("#btnReset").addEventListener('click', () => onResetClicked())
-  this.document.querySelector("#btnIncr").addEventListener('click', () => onIncreaseClicked())
+// window.addEventListener('DOMContentLoaded', function() {
+  // this.document.querySelector("#btnDecr").addEventListener('click', () => onDecreaseClicked())
+  // this.document.querySelector("#btnReset").addEventListener('click', () => onResetClicked())
+  // this.document.querySelector("#btnIncr").addEventListener('click', () => onIncreaseClicked())
+// })
+
+$(function() {
+  $('#btnDecr').on('click', () => onDecreaseClicked())
+  $('#btnReset').on('click', () => onResetClicked())
+  $('#btnIncr').on('click', () => onIncreaseClicked())
 })
 
 /**
@@ -46,15 +52,22 @@ function increaseCounter() {
  * View
  */
 function render() {
-  const counterDOM = document.getElementById("counter")
-  counterDOM.textContent = counter
-  styleCounter(counterDOM)
+  // const counterDOM = document.getElementById("counter")
+  // counterDOM.textContent = counter
+  // styleCounter(counterDOM)
+  const $counterDOM = $('#counter')
+  $counterDOM.text(counter)
+
+  styleCounter($counterDOM)
 }
 
-function styleCounter(counterDOM) {
-  counterDOM.classList.toggle('color-green', counter > 0)
-  counterDOM.classList.toggle('color-red', counter < 0)
-  counterDOM.classList.toggle('color-black', counter === 0)
+function styleCounter($counterDOM) {
+  // counterDOM.classList.toggle('color-green', counter > 0)
+  // counterDOM.classList.toggle('color-red', counter < 0)
+  // counterDOM.classList.toggle('color-black', counter === 0)
+  $counterDOM.toggleClass('color-green', counter > 0)
+  $counterDOM.toggleClass('color-red', counter < 0)
+  $counterDOM.toggleClass('color-black', counter === 0)
 }
 
 // function styleCounter(counterDOM) {

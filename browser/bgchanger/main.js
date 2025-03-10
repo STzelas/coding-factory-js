@@ -1,7 +1,13 @@
 let color = undefined
 
-window.addEventListener("DOMContentLoaded", function() {
-  this.document.querySelector("#btn").addEventListener('click', () => onClickMeClicked())
+// window.addEventListener("DOMContentLoaded", function() {
+//   // this.document.querySelector("#btn").addEventListener('click', () => onClickMeClicked())
+// })
+
+$(function() {
+  $('#btn').on('click', () => {
+    onClickMeClicked()
+  })
 })
 
 function onClickMeClicked() {
@@ -15,7 +21,7 @@ function onClickMeClicked() {
 
 function updateBg() {
   color = getBgColor() // update state
-  renderBg()
+  renderBg(color)
 }
 
 function getBgColor() {
@@ -26,8 +32,10 @@ function getBgColor() {
 /**
  * View - UI Rendering
  */
-function renderBg() {
-  document.querySelector('#hex').innerHTML = color
-  document.body.style.backgroundColor = color
+function renderBg(bgColor) {
+  // document.querySelector('#hex').innerHTML = color
+  // document.body.style.backgroundColor = color
+  $('#hex').text(bgColor)
+  $('body').css('background-color', bgColor)
 }
 
